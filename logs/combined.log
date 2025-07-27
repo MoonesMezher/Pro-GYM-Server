@@ -1,0 +1,84 @@
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"admin setup"}
+{"level":"error","message":"admin setup"}
+{"level":"error","message":"admin setup"}
+{"level":"error","message":"admin setup Admin is Existed","stack":"Error: Admin is Existed\n    at createAdmin (C:\\Users\\97150\\OneDrive\\Desktop\\Projects\\GYM\\server\\src\\helpers\\createAdmin.helper.js:15:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+{"level":"error","message":"admin setup Admin is Existed","stack":"Error: Admin is Existed\n    at createAdmin (C:\\Users\\97150\\OneDrive\\Desktop\\Projects\\GYM\\server\\src\\helpers\\createAdmin.helper.js:15:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"ENOENT: no such file or directory, open 'C:\\logs\\combined.log'"}
+{"level":"error"}
+{"level":"error","message":"ENOENT: no such file or directory, open 'C:\\logs\\combined.log'"}
+{"level":"error"}
+{"level":"error","message":"EISDIR: illegal operation on a directory, read"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"Schedule validation failed: state: `of` is not a valid enum value for path `state`."}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":"error"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":"error"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'role')"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"jwt malformed"}
+{"level":"error","message":"invalid signature"}
+{"level":"error"}
+{"level":"error","message":"invalid signature"}
+{"level":"error"}
