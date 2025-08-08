@@ -1,0 +1,18 @@
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"EPERM: operation not permitted, open 'C:\\Users\\97150\\OneDrive\\Desktop\\Projects\\GYM\\server\\logs\\combined.log'"}
+{"level":"error","message":"EPERM: operation not permitted, open 'C:\\Users\\97150\\OneDrive\\Desktop\\Projects\\GYM\\server\\logs\\combined.log'"}
+{"level":"error","message":"EPERM: operation not permitted, open 'C:\\Users\\97150\\OneDrive\\Desktop\\Projects\\GYM\\server\\logs\\combined.log'"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"EPERM: operation not permitted, open 'C:\\Users\\97150\\OneDrive\\Desktop\\Projects\\GYM\\server\\logs\\combined.log'"}
+{"level":"error","message":"EPERM: operation not permitted, unlink 'C:\\Users\\97150\\OneDrive\\Desktop\\Projects\\GYM\\server\\logs\\combined.log'"}
+{"level":"error"}
+{"level":"error","message":"The \"data\" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"Unexpected field"}
+{"level":"error","message":"Unexpected field"}
+{"level":"error","message":"Unexpected field"}

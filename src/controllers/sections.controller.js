@@ -3,6 +3,7 @@ const Section = require("../models/Section");
 const SectionCoach = require("../models/SectionCoach");
 const SectionUser = require("../models/SectionUser");
 const Rate = require("../models/Rate");
+const User = require("../models/User");
 
 class SectionsController {
     async getAll(req, res) {
@@ -10,6 +11,39 @@ class SectionsController {
             const sections = await Section.find();
 
             return res.status(200).json({ message: "Got all sections successfully", sections })
+        } catch (error) {
+            throw new Error(error.message);
+        }
+    }
+
+    async getAllCoaches(req, res) {
+        try {
+            const id = req.params.id;
+
+            const [coaches, addedCoaches] = await Promise.all([
+                User.find({ role: "coach" }),
+                SectionCoach.find({ _section: id })
+            ]);
+
+            const data = coaches.map(e => {
+                if(addedCoaches.find(ee => ee._id === e?._id)) {
+                    return { name: e?.name, _id: e._id, checked: true }
+                } else {
+                    return { name: e?.name, _id: e._id, checked: false }
+                }
+            })
+
+            return res.status(200).json({ message: "Got all coaches successfully", data })
+        } catch (error) {
+            throw new Error(error.message);
+        }
+    }
+
+    async getAllUsers(req, res) {
+        try {
+            const users = await User.find({});
+
+            return res.status(200).json({ message: "Got all sections successfully", users })
         } catch (error) {
             throw new Error(error.message);
         }

@@ -13,4 +13,7 @@ const errorsController = require("../controllers/errors.controller");
 // GET
 router.get("/", [auth, role(["admin"])], errorsController.getAll);
 
+// DELETE
+router.delete("/", [auth, role(["admin"])], errorsController.clear);
+
 module.exports = router

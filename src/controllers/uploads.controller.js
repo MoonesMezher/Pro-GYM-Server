@@ -9,7 +9,7 @@ class UploadsController {
 
             const images = files.map(e => e.filename);
 
-            return res.status(200).json({ message: "Upload files successfully", images })
+            return res.status(201).json({ message: "Upload files successfully", images })
         } catch (error) {
             throw new Error(error.message);
         }

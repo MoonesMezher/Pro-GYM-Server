@@ -17,6 +17,10 @@ const { addSectionValidate, updateSectionValidate, addCochesValidate, deleteCoch
 // GET
 router.get("/", sectionsController.getAll);
 
+router.get("/coaches/:id", sectionsController.getAllCoaches);
+
+router.get("/users/:id", sectionsController.getAllUsers);
+
 router.get("/:id", [id], sectionsController.getOne);
 
 // POST

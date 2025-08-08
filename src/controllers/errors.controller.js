@@ -15,6 +15,18 @@ class ErrorsController {
             throw new Error(error.message);
         }
     }
+
+    async clear(req, res) {
+        try {
+            const dir = path.join(__dirname, "../../logs/combined.log")
+
+            fs.writeFileSync(dir, "")
+
+            return res.status(200).json({ message: "Deleted logs succssefully" })
+        } catch (error) {
+            throw new Error(error.message);
+        }
+    }
 }
 
 module.exports = new ErrorsController();

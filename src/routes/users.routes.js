@@ -15,6 +15,8 @@ const { signupValidate, loginValidate, updateProfileValidate, updateStateValidat
 // GET
 router.get("/", [auth, role(["admin", "supervisor"])], usersController.getAll);
 
+router.get("/supervisors", [auth, role(["admin"])], usersController.getSupervisors)
+
 router.get("/coach/:id", [auth, role(["admin"]), id], usersController.getCoach);
 
 router.get("/state/:state", [auth, role(["admin", "supervisor"])], usersController.getByState)

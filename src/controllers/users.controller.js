@@ -171,6 +171,16 @@ class UsersControllor {
         }
     }
 
+    async getSupervisors(req, res) {
+        try {
+            const users = await User.find({ role: "supervisor" }).select("-password -refreshToken -__v")                
+
+            return res.status(200).json({ message: "Got supervisors successfully", users })
+        } catch (error) {
+            throw new Error(error.message);
+        }
+    }
+
     async getByState(req, res) {
         try {
             const state = req.params.state;
