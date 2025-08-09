@@ -25,8 +25,8 @@ class SectionsController {
                 SectionCoach.find({ _section: id })
             ]);
 
-            const data = coaches.map(e => {
-                if(addedCoaches.find(ee => ee._id === e?._id)) {
+            const data = coaches.map(e => {                
+                if(addedCoaches.find(ee => ee._user.toString() === e?._id.toString())) {
                     return { name: e?.name, _id: e._id, checked: true }
                 } else {
                     return { name: e?.name, _id: e._id, checked: false }
@@ -41,9 +41,22 @@ class SectionsController {
 
     async getAllUsers(req, res) {
         try {
-            const users = await User.find({});
+            const id = req.params.id;
 
-            return res.status(200).json({ message: "Got all sections successfully", users })
+            const [users, addedUsers] = await Promise.all([
+                User.find({ role: "user" }),
+                SectionUser.find({ _section: id })
+            ]);
+
+            const data = users.map(e => {                
+                if(addedUsers.find(ee => ee._user.toString() === e?._id.toString())) {
+                    return { name: e?.name, email: e.email, _id: e._id, checked: true }
+                } else {
+                    return { name: e?.name, email: e.email, _id: e._id, checked: false }
+                }
+            })
+
+            return res.status(200).json({ message: "Got all users successfully", data })
         } catch (error) {
             throw new Error(error.message);
         }

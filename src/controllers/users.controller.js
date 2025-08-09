@@ -78,7 +78,8 @@ class UsersControllor {
                             "user.name":  { 
                                 $regex: name, 
                                 $options: "i"  // Case-insensitive
-                            }
+                            },
+                            "user.role": "user"
                         }
                     },
                     {
@@ -101,7 +102,7 @@ class UsersControllor {
                     },
                 ]);
             } else {
-                users = await Profile.find().populate("_user", "-password -refreshToken -__v")
+                users = []
             }
 
             return res.status(200).json({ message: "Got users successfully", users })
