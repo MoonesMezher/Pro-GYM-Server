@@ -30,13 +30,14 @@ router.post("/add/coaches/section/:id", [auth, role(["admin"]), id, ...addCoches
 
 router.post("/add/user/section/:id", [auth, role(["admin", "supervisor"]), id, ...addUserValidate], sectionsController.addUser);
 
+router.post("/delete/coaches/section/:id", [auth, role(["admin"]), id, ...deleteCochesValidate], sectionsController.deleteCoches)
+
+router.post("/delete/user/section/:id", [auth, role(["admin", "supervisor"]), id, ...deleteUserValidate], sectionsController.deleteUser)
+
 // PUT 
 router.put("/update/:id", [auth, role(["admin"]), id, ...updateSectionValidate], sectionsController.update);
 
 // DELETE
-router.delete("/delete/coaches/section/:id", [auth, role(["admin"]), id, ...deleteCochesValidate], sectionsController.deleteCoches)
-
-router.delete("/delete/user/section/:id", [auth, role(["admin", "supervisor"]), id, ...deleteUserValidate], sectionsController.deleteUser)
 
 router.delete("/delete/user/:id", [auth, role(["admin", "supervisor"]), id], sectionsController.deleteSubs)
 

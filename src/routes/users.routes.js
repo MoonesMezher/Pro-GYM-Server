@@ -9,6 +9,7 @@ const id = require("../middlewares/id.middleware");
 // controller
 const usersController = require("../controllers/users.controller");
 const { signupValidate, loginValidate, updateProfileValidate, updateStateValidate } = require("../validation/users.validate");
+const { authLimiter } = require("../config/rateLimiter");
 
 // routes
 
@@ -28,7 +29,7 @@ router.get("/me", [auth, role(["user", "coach", "admin", "supervisor"])], usersC
 router.get("/:id", [auth, role(["admin", "supervisor"]), id], usersController.getOne);
 
 // POST
-router.post("/login", [...loginValidate], usersController.login);
+router.post("/login", [authLimiter, ...loginValidate], usersController.login);
 
 router.post("/signup", [...signupValidate], usersController.signup);
 

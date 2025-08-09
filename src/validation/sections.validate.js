@@ -172,7 +172,7 @@ const addCochesValidate = [
 const deleteCochesValidate = [
     body("ids")
         .isArray().withMessage("Ids must be an array")
-        .custom((value) => {
+        .custom((value) => {                      
             if(Array.isArray(value)) {
                 if (!value.every(id => mongoose.Types.ObjectId.isValid(id))) {
                     throw new Error("All IDs must be valid");
@@ -180,7 +180,7 @@ const deleteCochesValidate = [
             }
             return true;
         })
-        .custom(async (value, { req }) => {
+        .custom(async (value, { req }) => {            
             if(Array.isArray(value)) {
                 const sectionId = req.params.id;
                 

@@ -13,9 +13,9 @@ class SchedulesController {
             let schedules;
 
             if(!state || !allowedStates.includes(state)) {
-                schedules = await Schedule.find().populate("_user", "-password -refreshToken");
+                schedules = await Schedule.find().populate("_user", "-password -refreshToken").sort({ createdAt: -1 });
             } else {
-                schedules = await Schedule.find({ state }).populate("_user", "-password -refreshToken");
+                schedules = await Schedule.find({ state }).populate("_user", "-password -refreshToken").sort({ createdAt: -1 });
             }
 
             return res.status(200).json({ message: "Got schedules successfully", data: schedules, live })
@@ -41,7 +41,7 @@ class SchedulesController {
             const live = await Schedule.findOne({ _user: id, state: "on" });
 
             if(live) {
-                return res.status(400).json({ message: "This user is active" })
+                return res.status(400).json({ message: "This user is live" })
             }
 
             await Schedule.create({ _user: id });
